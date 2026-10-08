@@ -14,17 +14,6 @@ build/
 .env.*.local
 !.env.example
 
-# Strapi
-backend/.tmp/
-backend/.cache/
-backend/build/
-backend/dist/
-backend/public/uploads/
-backend/database/
-backend/exports/
-backend/.strapi/
-backend/types/generated/
-
 # Logs
 *.log
 npm-debug.log*

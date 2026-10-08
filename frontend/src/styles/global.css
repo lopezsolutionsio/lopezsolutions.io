@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-petrol: #134e5e;
+  --color-petrol-dark: #0b3d4a;
+  --color-ink: #0f1419;
+  --color-muted: #5a6b70;
+
+  --font-sans: "Space Grotesk", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+}

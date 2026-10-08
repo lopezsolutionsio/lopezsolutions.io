@@ -1,0 +1,28 @@
+---
+title: "Hola mundo"
+description: "Primer post del vlog — por qué estoy construyendo este sitio."
+publishedAt: 2026-10-07
+tags: ["meta"]
+---
+
+Este es el primer post del vlog. Lo armé con **Astro + MDX**, deploy en Cloudflare Pages, cero servidor.
+
+## Por qué este sitio
+
+Quería un lugar donde:
+
+- Compartir lo que estoy construyendo (vlog).
+- Mostrar proyectos cuando alguien pregunta "¿en qué andás?" (portafolio).
+- No pagar hosting ni mantener servidores.
+
+## Cómo publico
+
+Cada post es un archivo `.mdx` en `src/content/posts/`. Hago commit, push, y Cloudflare lo despliega automáticamente.
+
+Para embed de video, basta con poner una URL en el frontmatter:
+
+```yaml
+video: https://www.youtube.com/embed/VIDEO_ID
+```
+
+Y el iframe aparece en la cabecera del post.
