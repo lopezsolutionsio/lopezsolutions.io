@@ -1,0 +1,151 @@
+---
+title: "Save BTC for the next financial crisis"
+description: "Why Bitcoin is a hedge for the next crisis, and how to generate a wallet from scratch using casino dice and the BIP39 word list."
+publishedAt: 2026-10-27
+tags: ["bitcoin", "finance", "self-custody"]
+---
+
+### Why to do this?
+
+Because Bitcoin was created after the 2009 crisis with the goal of preventing inflation (people is going to still printing money until everything just explote).
+
+There are only 21 millions of Bitcoins (and they are allowed to be there by the Iluminatis people).
+
+### Why not gold?
+
+Because gold is difficult to sell (any pawn store is going to pay whatever they want for you gold, worst in a crisis) and transport (if you need to travel to other country will be dificultades to move it).
+
+### How to Save it?
+
+This tuto is about long term saving.
+
+Related to exchanges markets, you can buy it there but you can't keep it there, because in a crisis they will just blocked their systems and you will not have access to your money, you will be expropiated it.
+
+##### What about Cold Wallet?
+
+Cold Wallets are great for termporally exchanges but for long term they are companies too so they have interests too.
+
+For example the recent hack to Cold Card Wallet. It was a wallet without internet conection it supposed to be "secure" but it was a huge issue in the aleatority of seed creation or probably it was a backdoor. So you can't trust in any company too.
+
+##### What can I do?
+
+The best you can do is go directly to the font. Create a wallet with dices and save small amounts of money at a long term.
+
+Like ground gold in the earth in diferent places.
+
+## Creating a Wallet from Scratch
+
+### Create a SEED
+
+##### What's a seed?
+
+A digital seed tried to emulated a physical seed, creating new branches from that seed. Basically it's a token. You can get a lot of diferent addresses from that seed.
+
+The most commont seeds are a combination of 12 words from a full list of 2048 words also knowed as BIP39 list.
+
+The combination of these words in diferent orders it's probabilistically so secure.
+
+##### Ingredients
+
+1. Buy a kit of 5 casino dices in Amazon or anything else
+
+##### "Hello Word"
+
+As we said we have a full list of 2048 diferent words.
+
+each word in the list has an index from 0 to 2047. And we can represent each numer in binary notation.
+
+For example for 0 will be 00000000000 in binary and
+
+1: 00000000001
+
+2: 00000000010
+
+3: 00000000011
+
+...
+
+2047: 11111111111
+
+##### Rolling the diece
+
+Each number on each die will be converted to a 0 or a 1, in other words it will become in a single bit.
+
+If we roll 5 dice we will get 5 bits, but we need 11 bits for one single word, and we need 12 words.
+
+So we need 11*12=132 bits in order to get 12 words
+
+with 5 dice we will need 132/5=26.4. Well round that down to 26 rolls an we discard the last 2 dice (last 2 bits).
+
+##### First roll
+
+[6, 3, 3, 2, 6]
+
+If we got 1, 2 or 3 they will be converted to 0
+
+If we got 4, 5, 6 they will be converted to 1
+
+So
+
+[6, 3, 3, 2, 6] --> [1, 0, 0, 0, 1]
+
+##### Second roll
+
+[6, 1, 4, 2, 4] --> [1, 0, 1, 0, 1]
+
+##### Third roll
+
+[4, 2, 6, 4, 3] --> [1, 0, 1, 1, 0]
+
+Lets stop here and merge all the arrays
+
+[6, 3, 3, 2, 6] - [6, 3, 3, 2, 6] - [4, 2, 6, 4, 3]
+
+[1, 0, 0, 0, 1] - [1, 0, 1, 0, 1] - [1, 0, 1, 0, 1]
+
+[1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1]
+
+Lets take the first 11 spots
+
+[1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1]
+
+10001101011 equivalent to 1131 index
+
+the index 1131 in the full list or formal named BIP39 correspond to "miracle" word.
+
+So we have the first word of our 12 words seed.
+
+miracle ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____
+
+##### Rolling 5 dice 26 times in order to get 130 numbers
+
+1. [6, 3, 1, 3, 3] --> [1, 0, 0, 0, 0]
+2. [2, 2, 2, 2, 4] --> [0, 0, 0, 0, 1]
+3. [3, 4, 5, 3, 3] --> [0, 1, 1, 0, 0]
+4. [6, 4, 3, 2, 5] --> [1, 1, 0, 0, 1]
+5. [6, 1, 1, 6, 5] --> [1, 0, 0, 1, 1]
+6. [3, 6, 2, 1, 2] --> [0, 1, 0, 0, 0]
+7. [1, 2, 4, 6, 4] --> [0, 0, 1, 1, 1]
+8. [5, 3, 5, 2, 5] --> [1, 0, 1, 0, 1]
+9. [3, 1, 3, 5, 2] --> [0, 0, 0, 1, 0]
+10. [2, 4, 6, 2, 5] --> [0, 1, 1, 0, 1]
+11. [6, 1, 1, 2, 5] --> [1, 0, 0, 0, 1]
+12. [3, 5, 2, 4, 6] --> [0, 1, 0, 1, 1]
+13. [2, 5, 5, 6, 3] --> [0, 1, 1, 1, 0]
+14. [2, 5, 3, 1, 2] --> [0, 1, 0, 0, 0]
+15. [5, 1, 3, 1, 5] --> [1, 0, 0, 0, 1]
+16. [3, 4, 5, 4, 2] --> [0, 1, 1, 1, 0]
+17. [5, 6, 5, 3, 1] --> [1, 1, 1, 0, 0]
+18. [3, 5, 5, 2, 1] --> [0, 1, 1, 0, 0]
+19. [4, 1, 2, 6, 1] --> [1, 0, 0, 1, 0]
+20. [1, 6, 5, 2, 5] --> [0, 1, 1, 0, 1]
+21. [6, 4, 1, 2, 3] --> [1, 1, 0, 0, 0]
+22. [3, 1, 3, 1, 3] --> [0, 0, 0, 0, 0]
+23. [1, 4, 1, 2, 5] --> [0, 1, 0, 0, 1]
+24. [3, 2, 3, 5, 6] --> [0, 0, 0, 1, 1]
+25. [1, 6, 1, 1, 5] --> [0, 1, 0, 0, 1]
+26. [5, 6, 2, 3, 4] --> [1, 1, 0, 0, 1]
+
+##### Concatenated string
+
+1000000001011001100110011010000011110101000100110110001010110111001000100010111011100011001001001101110000000001001000110100111001

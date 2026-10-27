@@ -11,33 +11,33 @@ const projects = (await getCollection("projects"))
   .slice(0, 3);
 ---
 
-<Layout title="Lopez Solutions — Vlog y portafolio">
+<Layout title="Lopez Solutions — Vlog and portfolio">
   <section class="mx-auto max-w-5xl px-6 py-20">
     <h1 class="text-5xl font-bold tracking-tight text-petrol-dark sm:text-6xl">
       Lopez Solutions
     </h1>
     <p class="mt-6 max-w-2xl text-lg text-muted">
-      Vlog personal y portafolio. Construyo software, grabo lo que aprendo.
+      Personal vlog and portfolio. I build software and record what I learn.
     </p>
     <div class="mt-8 flex gap-4">
       <a
         href="/posts"
         class="rounded-md bg-petrol px-5 py-2.5 text-sm font-medium text-white hover:bg-petrol-dark transition-colors"
       >
-        Ver el vlog
+        Read the vlog
       </a>
       <a
         href="/projects"
         class="rounded-md border border-neutral-300 px-5 py-2.5 text-sm font-medium text-ink hover:border-petrol hover:text-petrol transition-colors"
       >
-        Ver portafolio
+        See projects
       </a>
     </div>
   </section>
 
   {posts.length > 0 && (
     <section class="mx-auto max-w-5xl px-6 py-12">
-      <h2 class="text-2xl font-semibold text-petrol-dark">Últimos posts</h2>
+      <h2 class="text-2xl font-semibold text-petrol-dark">Latest posts</h2>
       <ul class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <li class="rounded-lg border border-neutral-200 p-5 hover:border-petrol transition-colors">
@@ -53,7 +53,7 @@ const projects = (await getCollection("projects"))
 
   {projects.length > 0 && (
     <section class="mx-auto max-w-5xl px-6 py-12">
-      <h2 class="text-2xl font-semibold text-petrol-dark">Proyectos destacados</h2>
+      <h2 class="text-2xl font-semibold text-petrol-dark">Featured projects</h2>
       <ul class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <li class="rounded-lg border border-neutral-200 p-5 hover:border-petrol transition-colors">

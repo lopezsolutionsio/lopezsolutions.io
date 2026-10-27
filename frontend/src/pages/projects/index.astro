@@ -7,13 +7,13 @@ const projects = (await getCollection("projects")).sort(
 );
 ---
 
-<Layout title="Portafolio — Lopez Solutions">
+<Layout title="Projects — Lopez Solutions">
   <section class="mx-auto max-w-5xl px-6 py-20">
-    <h1 class="text-4xl font-bold tracking-tight text-petrol-dark">Portafolio</h1>
-    <p class="mt-3 text-muted">Proyectos que he construido.</p>
+    <h1 class="text-4xl font-bold tracking-tight text-petrol-dark">Projects</h1>
+    <p class="mt-3 text-muted">Things I've built.</p>
 
     {projects.length === 0 ? (
-      <p class="mt-10 text-muted">Aún no hay proyectos listados.</p>
+      <p class="mt-10 text-muted">No projects yet.</p>
     ) : (
       <ul class="mt-10 grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (
